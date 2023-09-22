@@ -1,30 +1,45 @@
-import { createRouter, createWebHistory } from "vue-router";
+import { createRouter, createWebHistory } from 'vue-router';
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
     {
-      path: "/",
-      name: "home",
-      component: () => import("../views/home.vue"),
+      path: '/',
+      name: 'home',
+      component: () => import('../views/home.vue'),
     },
 
     {
-      path: "/login",
-      name: "login",
-      component: () => import("../views/auth/login.vue"),
+      path: '/login',
+      name: 'login',
+      component: () => import('../views/auth/login.vue'),
       beforeEnter: guestMiddleware,
     },
     {
-      path: "/dashboard",
-      name: "dashboard",
-      component: () => import("../components/componentBE/dashboard/Index.vue"),
+      path: '/admin',
+      name: 'admin',
+      redirect: '/admin/dashboard',
+      component: () => import('../components/componentBE/template/Index.vue'),
+      children: [
+        {
+          path: 'dashboard',
+          name: 'dashboard',
+          component: () =>
+            import('../components/componentBE/dashboard/Index.vue'),
+        },
+      ],
       beforeEnter: authMiddleware,
     },
+    // {
+    //   path: '/dashboard',
+    //   name: 'dashboard',
+    //   component: () => import('../components/componentBE/dashboard/Index.vue'),
+    //   beforeEnter: authMiddleware,
+    // },
     {
-      path: "/product",
-      name: "product",
-      component: () => import("../components/componentBE/product/index.vue"),
+      path: '/product',
+      name: 'product',
+      component: () => import('../components/componentBE/product/index.vue'),
       beforeEnter: authMiddleware,
     },
   ],
@@ -32,7 +47,7 @@ const router = createRouter({
 
 export default router;
 function authMiddleware(to, from, next) {
-  const loggedIn = localStorage.getItem("loggedIn");
+  const loggedIn = localStorage.getItem('loggedIn');
 
   if (!loggedIn) {
     // Redirect to the previous page if not authenticated
@@ -43,7 +58,7 @@ function authMiddleware(to, from, next) {
 }
 
 function guestMiddleware(to, from, next) {
-  const loggedIn = localStorage.getItem("loggedIn");
+  const loggedIn = localStorage.getItem('loggedIn');
 
   if (loggedIn) {
     // Redirect to the previous page if already logged in

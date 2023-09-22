@@ -6,9 +6,11 @@
     data-navbarbg="skin6"
     data-sidebartype="full"
     data-sidebar-position="fixed"
-    data-header-position="fixed">
+    data-header-position="fixed"
+  >
     <div
-      class="position-relative overflow-hidden radial-gradient min-vh-100 d-flex align-items-center justify-content-center">
+      class="position-relative overflow-hidden radial-gradient min-vh-100 d-flex align-items-center justify-content-center"
+    >
       <div class="d-flex align-items-center justify-content-center w-100">
         <div class="row justify-content-center w-100">
           <div class="col-md-8 col-lg-6 col-xxl-3">
@@ -16,11 +18,13 @@
               <div class="card-body">
                 <a
                   href="./index.html"
-                  class="text-nowrap logo-img text-center d-block py-3 w-100">
+                  class="text-nowrap logo-img text-center d-block py-3 w-100"
+                >
                   <img
                     src="../../assets/template/images/logos/dark-logo.svg"
                     width="180"
-                    alt="" />
+                    alt=""
+                  />
                 </a>
                 <p class="text-center">Your Social Campaigns</p>
                 <form @submit.prevent="login">
@@ -32,7 +36,8 @@
                       v-model="user.email"
                       type="email"
                       class="form-control"
-                      aria-describedby="emailHelp" />
+                      aria-describedby="emailHelp"
+                    />
                   </div>
                   <div class="mb-4">
                     <label for="exampleInputPassword1" class="form-label"
@@ -42,7 +47,8 @@
                       v-model="user.password"
                       type="password"
                       class="form-control"
-                      id="exampleInputPassword1" />
+                      id="exampleInputPassword1"
+                    />
                   </div>
                   <!-- <div
                     class="d-flex align-items-center justify-content-between mb-4">
@@ -66,12 +72,14 @@
                   <button
                     type="submit"
                     :disabled="loading"
-                    class="btn btn-primary w-100 py-8 fs-4 mb-4 rounded-2">
+                    class="btn btn-primary w-100 py-8 fs-4 mb-4 rounded-2"
+                  >
                     <div v-if="!loading"><i class="bi bi-cart"></i>Sign In</div>
                     <div v-else>
                       <img
                         src="../../assets//loading.gif"
-                        style="width: 50px; height: 30px" />
+                        style="width: 50px; height: 30px"
+                      />
                     </div>
                   </button>
 
@@ -144,7 +152,7 @@ export default {
 
                 //redirect dashboard
                 // return this.$router.push({ path: "/dashboard" });
-                window.location.href = "/dashboard";
+                window.location.href = "/admin/dashboard";
               } else {
                 //set state login failed
                 this.loginFailed = true;

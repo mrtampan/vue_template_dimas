@@ -7,7 +7,8 @@
           <a
             class="nav-link sidebartoggler nav-icon-hover"
             id="headerCollapse"
-            href="javascript:void(0)">
+            href="javascript:void(0)"
+          >
             <i class="ti ti-menu-2"></i>
           </a>
         </li>
@@ -20,7 +21,8 @@
       </ul>
       <div class="navbar-collapse justify-content-end px-0" id="navbarNav">
         <ul
-          class="navbar-nav flex-row ms-auto align-items-center justify-content-end">
+          class="navbar-nav flex-row ms-auto align-items-center justify-content-end"
+        >
           <!-- <a
             href="https://adminmart.com/product/modernize-free-bootstrap-admin-dashboard/"
             target="_blank"
@@ -36,17 +38,20 @@
               href="javascript:void(0)"
               id="drop2"
               data-bs-toggle="dropdown"
-              aria-expanded="false">
+              aria-expanded="false"
+            >
               <img
                 src="../../../assets/template/images/profile/user-1.jpg"
                 alt=""
                 width="35"
                 height="35"
-                class="rounded-circle" />
+                class="rounded-circle"
+              />
             </a>
             <div
               class="dropdown-menu dropdown-menu-end dropdown-menu-animate-up"
-              aria-labelledby="drop2">
+              aria-labelledby="drop2"
+            >
               <div class="message-body">
                 <!-- <a
                   href="javascript:void(0)"

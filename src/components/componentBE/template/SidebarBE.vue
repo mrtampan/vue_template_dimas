@@ -8,11 +8,13 @@
           <img
             src="../../../assets/template/images/logos/dark-logo.svg"
             width="180"
-            alt="" />
+            alt=""
+          />
         </a>
         <div
           class="close-btn d-xl-none d-block sidebartoggler cursor-pointer"
-          id="sidebarCollapse">
+          id="sidebarCollapse"
+        >
           <i class="ti ti-x fs-8"></i>
         </div>
       </div>
@@ -29,7 +31,8 @@
               to="/dashboard"
               exact
               aria-expanded="false"
-              active-class="active-link">
+              active-class="active-link"
+            >
               <span>
                 <i class="ti ti-layout-dashboard"></i>
               </span>
@@ -46,7 +49,8 @@
               to="/product"
               exact
               aria-expanded="false"
-              active-class="active-link">
+              active-class="active-link"
+            >
               <span>
                 <i class="ti ti-article"></i>
               </span>
